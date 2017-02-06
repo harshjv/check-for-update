@@ -30,10 +30,21 @@ Create `CheckForUpdate` instance with provided configuration.
 }
 ```
 
+### cfu.now()
+
+Manually check for update.
+
+### cfu.start()
+
+Start checking for update manually (or when `checkOnLaunch` is `false`).
+
+### cfu.stop()
+
+Stop update checker.
+
 ### cfu.on('update_available', ({ currentVersion, newVersion, repoURL, updateURL }) => {})
 
 Emitted when a new version/update is available.
-
 
 ### cfu.on('error', (error) => {})
 
@@ -67,18 +78,6 @@ cfu.on('update_available', (data) => {
 
   // ...
 })
-```
-
-To start checking for update manually (or when `checkOnLaunch` is `false`);
-
-```js
-cfu.start()
-```
-
-To stop update checker;
-
-```js
-cfu.stop()
 ```
 
 
