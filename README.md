@@ -5,6 +5,13 @@
 Check for update manually or at configured interval with minimum configuration.
 
 
+## Installation
+
+```
+npm install check-for-update
+```
+
+
 ## API
 
 
@@ -33,7 +40,7 @@ Emitted when a new version/update is available.
 Emitted when client encounters an error.
 
 
-## Example
+## Usage
 
 ```js
 const CheckForUpdate = require('check-for-update')
