@@ -68,7 +68,7 @@ class CheckForUpdate extends EventEmitter {
   }
 
   stop () {
-    clearInterval(this.intervalHandler)
+    if (this.intervalHandler) clearInterval(this.intervalHandler)
   }
 
   now () {
