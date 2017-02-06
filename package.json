@@ -1,6 +1,6 @@
 {
   "name": "check-for-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check for update manually or at configured interval with minimum configuration",
   "main": "lib.js",
   "scripts": {
