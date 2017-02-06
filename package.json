@@ -1,0 +1,27 @@
+{
+  "name": "check-for-update",
+  "version": "1.0.0",
+  "description": "Check for update manually or at configured interval with minimum configuration",
+  "main": "lib.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshjv/check-for-update.git"
+  },
+  "author": "Harsh Vakharia <harshjv@gmail.com> (https://harshjv.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshjv/check-for-update/issues"
+  },
+  "homepage": "https://github.com/harshjv/check-for-update#readme",
+  "dependencies": {
+    "parse-github-repo-url": "^1.4.0",
+    "request": "^2.79.0",
+    "semver": "^5.3.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
