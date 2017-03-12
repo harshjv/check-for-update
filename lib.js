@@ -1,8 +1,11 @@
-const EventEmitter = require('events')
+import EventEmitter from 'events'
 
-const semver = require('semver')
-const request = require('request')
-const parse = require('parse-github-repo-url')
+import Debug from 'debug'
+import semver from 'semver'
+import request from 'request'
+import parse from 'parse-github-repo-url'
+
+const debug = Debug('check-for-update:main')
 
 class CheckForUpdate extends EventEmitter {
   constructor (config) {
@@ -62,6 +65,8 @@ class CheckForUpdate extends EventEmitter {
   }
 
   start () {
+    debug('Started checking for update periodically')
+
     this.intervalHandler = setInterval(() => {
       this.now()
     }, this.config.intervalHrs * 60 * 60 * 1000)
@@ -72,6 +77,8 @@ class CheckForUpdate extends EventEmitter {
   }
 
   now () {
+    debug('Checking for update')
+
     const ref = this
 
     request({
@@ -94,6 +101,9 @@ class CheckForUpdate extends EventEmitter {
             const newVersion = semver.clean(data.tag_name)
 
             if (semver.gt(newVersion, ref.config.currentVersion)) {
+              debug('Update available')
+              debug(`From v${ref.config.currentVersion} to v${newVersion}`)
+
               ref.emit('update_available', {
                 currentVersion: ref.config.currentVersion,
                 newVersion,

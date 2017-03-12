@@ -1,6 +1,6 @@
 {
   "name": "check-for-update",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check for update manually or at configured interval with minimum configuration",
   "main": "dist/lib.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
+    "debug": "^2.6.2",
     "standard": "^8.6.0"
   },
   "standard": {

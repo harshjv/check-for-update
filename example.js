@@ -7,3 +7,5 @@ const cfu = new CheckForUpdate({
 
 cfu.on('error', (data) => console.error(data))
 cfu.on('update_available', (data) => console.log(data))
+
+cfu.start()
